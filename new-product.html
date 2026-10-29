@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SanviPop</title>
+  <meta charset="UTF-8">
+  <script src="src/new-product.ts" type="module"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SanviPop Lite</a>
+        <ul class="navbar-nav me-auto mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="new-product.html">New product</a>
+        </li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+     <form action="#" class="mt-4" id="newProduct">
+      <div class="mb-3">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Product name" required minlength="4">
+        <div class="invalid-feedback">Title is required and must be at least 4 characters long.</div>
+      </div>
+      <div class="mb-3">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3" placeholder="Description..." required minlength="10"></textarea>
+        <div class="invalid-feedback">Description is required and at least 10 characters.</div>
+      </div>
+      <div class="mb-3">
+        <label for="price">Price</label>
+        <input type="number" step="0.01" class="form-control" name="price" id="price" placeholder="Price" required min="0.01">
+        <div class="invalid-feedback">Price is required and must be greater than zero.</div>
+      </div>
+      <div class="mb-3">
+        <label for="category">Category</label>
+        <select id="category" class="form-select" name="category" required>
+          <option value="" selected>Choose a category...</option>
+        </select>
+        <div class="invalid-feedback">You must select a category.</div>
+      </div>
+      <div class="mb-3">
+        <label for="image">Main photo</label>
+        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+        <div class="invalid-feedback">Photo is required and less than 200KB.</div>
+      </div>
+      <img src="" alt="" id="imgPreview" class="img-thumbnail d-none mb-3">
+
+      <div>
+        <button type="submit" class="btn btn-primary btn-lg">Create</button>
+      </div>
+      
+    </form>
+  </div>
+
+</body>
+
+</html>
